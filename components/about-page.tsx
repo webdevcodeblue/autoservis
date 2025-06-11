@@ -370,7 +370,7 @@ export function AboutPage() {
                   asChild
                   size="lg"
                   variant="secondary"
-                  className="bg-white/90 hover:bg-white text-blue-600 hover:text-blue-700 border border-white/20 dark:bg-transparent dark:hover:bg-white dark:text-white dark:hover:text-blue-600 dark:border-white rounded-2xl px-8 py-4 text-lg font-semibold shadow-lg"
+                  className="bg-white/90 hover:bg-white text-blue-600 hover:text-blue-700 border border-white/20 dark:bg-gray-800/90 dark:hover:bg-white dark:text-white dark:hover:text-blue-600 dark:border-white rounded-2xl px-8 py-4 text-lg font-semibold shadow-lg"
                 >
                   <Link href="/usluge">{t('viewServices')}</Link>
                 </Button>
