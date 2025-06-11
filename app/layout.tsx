@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://autoservis-katanovic.com'),
+  metadataBase: new URL('https://autoservis-44sz.vercel.app'),
   title: {
     default: 'Autoservis Katanović - Profesionalni autoservis u Finčevcu',
     template: '%s | Autoservis Katanović',
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'hr_HR',
-    url: 'https://autoservis-katanovic.com',
+    url: 'https://autoservis-44sz.vercel.app',
     siteName: 'Autoservis Katanović',
     title: 'Autoservis Katanović - Profesionalni autoservis',
     description:
       'Pouzdan i stručan servis za sve vrste vozila osnovan 2018. godine',
     images: [
       {
-        url: '/images/about-autoservis.jpg',
+        url: 'https://autoservis-44sz.vercel.app/images/about-autoservis.jpg',
         width: 1200,
         height: 630,
         alt: 'Autoservis Katanović - Profesionalni autoservis u Finčevcu',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: 'Autoservis Katanović - Profesionalni autoservis',
     description:
       'Pouzdan i stručan servis za sve vrste vozila osnovan 2018. godine',
-    images: ['/images/about-autoservis.jpg'],
+    images: ['https://autoservis-44sz.vercel.app/images/about-autoservis.jpg'],
   },
   robots: {
     index: true,
@@ -198,6 +198,45 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#2563eb" />
 
+        {/* Explicit Open Graph meta tags for better WhatsApp support */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://autoservis-44sz.vercel.app" />
+        <meta
+          property="og:title"
+          content="Autoservis Katanović - Profesionalni autoservis"
+        />
+        <meta
+          property="og:description"
+          content="Pouzdan i stručan servis za sve vrste vozila osnovan 2018. godine"
+        />
+        <meta
+          property="og:image"
+          content="https://autoservis-44sz.vercel.app/images/about-autoservis.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+          property="og:image:alt"
+          content="Autoservis Katanović - Profesionalni autoservis u Finčevcu"
+        />
+        <meta property="og:site_name" content="Autoservis Katanović" />
+        <meta property="og:locale" content="hr_HR" />
+
+        {/* Twitter Card meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Autoservis Katanović - Profesionalni autoservis"
+        />
+        <meta
+          name="twitter:description"
+          content="Pouzdan i stručan servis za sve vrste vozila osnovan 2018. godine"
+        />
+        <meta
+          name="twitter:image"
+          content="https://autoservis-44sz.vercel.app/images/about-autoservis.jpg"
+        />
+
         {/* CRITICAL: Theme script - must be synchronous */}
         <script
           dangerouslySetInnerHTML={{
@@ -223,7 +262,7 @@ export default function RootLayout({
               '@type': 'AutoRepair',
               name: 'Autoservis Katanović',
               description: 'Profesionalni autoservis za sve vrste vozila',
-              url: 'https://autoservis-katanovic.com',
+              url: 'https://autoservis-44sz.vercel.app',
               telephone: '+385958427667',
               email: 'autoserviskatanovic@gmail.com',
               address: {
@@ -240,7 +279,8 @@ export default function RootLayout({
               },
               openingHours: ['Mo-Fr 08:00-20:00', 'Sa 08:00-14:00'],
               priceRange: '$$',
-              image: 'https://autoservis-katanovic.com/og-image.jpg',
+              image:
+                'https://autoservis-44sz.vercel.app/images/about-autoservis.jpg',
               sameAs: [],
             }),
           }}
