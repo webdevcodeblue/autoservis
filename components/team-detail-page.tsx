@@ -435,8 +435,8 @@ export function TeamDetailPage() {
                   <Button
                     asChild
                     size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-blue-600 rounded-2xl px-8 py-4 text-lg font-semibold"
+                    variant="secondary"
+                    className="bg-white/90 hover:bg-white text-blue-600 hover:text-blue-700 border border-white/20 rounded-2xl px-8 py-4 text-lg font-semibold shadow-lg"
                   >
                     <Link href="/usluge">{t('viewServices')}</Link>
                   </Button>
