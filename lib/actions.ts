@@ -1,3 +1,5 @@
+'use server';
+
 export async function submitContactForm(formData: FormData) {
   const name = formData.get('name') as string;
   const email = formData.get('email') as string;
@@ -10,7 +12,7 @@ export async function submitContactForm(formData: FormData) {
     throw new Error('Missing required fields');
   }
 
-  // For static export, we'll simulate the submission
+  // Server action now works properly on Vercel
   // In a real application, you would:
   // 1. Send email using a service like Resend, SendGrid, etc.
   // 2. Save to database
