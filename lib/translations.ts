@@ -1189,6 +1189,14 @@ export const translations = {
     certifiedHybrid: 'Zertifiziert für die Arbeit mit Hybridfahrzeugen',
     certifiedTraining: 'Professionelle Schulung für neueste Technologien',
     regularKnowledgeUpdates: 'Regelmäßige Wissens- und Fähigkeitsupdates',
+    specializedDiagnosticEquipment: 'Spezialisiert auf Diagnosegeräte',
+    certifiedWheelAlignment: 'Zertifiziert für Radausrichtung',
+    certifiedExpertise: 'Zertifizierte Expertise',
+    certifiedExpertiseDescription:
+      'Unser Team bildet sich kontinuierlich weiter und hält mit den neuesten Technologien in der Automobilindustrie Schritt',
+    trustYourCarExperts: 'Vertrauen Sie Ihr Auto den Experten an',
+    trustYourCarDescription:
+      'Unser Expertenteam ist bereit, Ihrem Fahrzeug die bestmögliche Pflege zu bieten. Kontaktieren Sie uns heute und überzeugen Sie sich von unserer Expertise.',
     averageRating: 'Durchschnittliche Bewertung',
     averageServiceTime: 'Durchschnittliche Servicezeit',
     warranty: 'Garantie',
