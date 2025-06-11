@@ -1,0 +1,84 @@
+1:"$Sreact.fragment"
+3:I[8581,["693","static/chunks/693-259efb15a977b13b.js","177","static/chunks/app/layout-10f10f02cc32d80c.js"],"ThemeProvider"]
+4:I[4153,["693","static/chunks/693-259efb15a977b13b.js","177","static/chunks/app/layout-10f10f02cc32d80c.js"],"LanguageProvider"]
+5:I[7555,[],""]
+6:I[1295,[],""]
+7:I[4734,["50","static/chunks/50-c5099abb6302907e.js","693","static/chunks/693-259efb15a977b13b.js","654","static/chunks/654-a6e3cbd719b8bb98.js","974","static/chunks/app/page-caf393bdafe9b8b8.js"],"Navbar"]
+8:I[1369,["50","static/chunks/50-c5099abb6302907e.js","693","static/chunks/693-259efb15a977b13b.js","654","static/chunks/654-a6e3cbd719b8bb98.js","974","static/chunks/app/page-caf393bdafe9b8b8.js"],"HeroSection"]
+9:I[3077,["50","static/chunks/50-c5099abb6302907e.js","693","static/chunks/693-259efb15a977b13b.js","654","static/chunks/654-a6e3cbd719b8bb98.js","974","static/chunks/app/page-caf393bdafe9b8b8.js"],"HowWeWorkSection"]
+a:I[9980,["50","static/chunks/50-c5099abb6302907e.js","693","static/chunks/693-259efb15a977b13b.js","654","static/chunks/654-a6e3cbd719b8bb98.js","974","static/chunks/app/page-caf393bdafe9b8b8.js"],"ServicesSection"]
+b:I[1681,["50","static/chunks/50-c5099abb6302907e.js","693","static/chunks/693-259efb15a977b13b.js","654","static/chunks/654-a6e3cbd719b8bb98.js","974","static/chunks/app/page-caf393bdafe9b8b8.js"],"TestimonialsSection"]
+c:I[3510,["50","static/chunks/50-c5099abb6302907e.js","693","static/chunks/693-259efb15a977b13b.js","654","static/chunks/654-a6e3cbd719b8bb98.js","974","static/chunks/app/page-caf393bdafe9b8b8.js"],"TeamSection"]
+d:I[1432,["50","static/chunks/50-c5099abb6302907e.js","693","static/chunks/693-259efb15a977b13b.js","654","static/chunks/654-a6e3cbd719b8bb98.js","974","static/chunks/app/page-caf393bdafe9b8b8.js"],"AboutSection"]
+e:I[2179,["50","static/chunks/50-c5099abb6302907e.js","693","static/chunks/693-259efb15a977b13b.js","654","static/chunks/654-a6e3cbd719b8bb98.js","974","static/chunks/app/page-caf393bdafe9b8b8.js"],"ContactSection"]
+f:I[7746,["50","static/chunks/50-c5099abb6302907e.js","693","static/chunks/693-259efb15a977b13b.js","654","static/chunks/654-a6e3cbd719b8bb98.js","974","static/chunks/app/page-caf393bdafe9b8b8.js"],"Footer"]
+10:I[9665,[],"OutletBoundary"]
+13:I[9665,[],"ViewportBoundary"]
+15:I[9665,[],"MetadataBoundary"]
+17:I[6614,[],""]
+:HL["/autoserviskatanovic/_next/static/css/931849707efa6405.css","style"]
+:HL["/autoserviskatanovic/_next/static/css/3538ddfb627ec212.css","style"]
+2:T965,
+            /* Critical CSS for hero section */
+            #home {
+              min-height: 100vh;
+              display: flex;
+              align-items: center;
+              position: relative;
+            }
+            
+            .hero-bg-desktop {
+              position: absolute;
+              inset: 0;
+              background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/images/hero-background.webp');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+            
+            .hero-bg-mobile {
+              position: absolute;
+              inset: 0;
+              background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/images/hero-mobile-1.webp');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+            
+            @media (min-width: 768px) {
+              .hero-bg-mobile { display: none; }
+            }
+            
+            @media (max-width: 767px) {
+              .hero-bg-desktop { display: none; }
+            }
+            
+            /* Prevent layout shift */
+            body {
+              margin: 0;
+              min-height: 100vh;
+            }
+            
+            /* Critical font loading */
+            @font-face {
+              font-family: 'Inter';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            
+            @font-face {
+              font-family: 'Inter';
+              font-style: normal;
+              font-weight: 700;
+              font-display: swap;
+              src: url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiA.woff2') format('woff2');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+          0:{"P":null,"b":"jPuBuWXfKMEa9zxJ5TKeq","p":"/autoserviskatanovic","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/autoserviskatanovic/_next/static/css/931849707efa6405.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/autoserviskatanovic/_next/static/css/3538ddfb627ec212.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"hr","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","link",null,{"rel":"preload","as":"image","href":"/images/hero-background.webp","media":"(min-width: 768px)","fetchPriority":"high"}],["$","link",null,{"rel":"preload","as":"image","href":"/images/hero-mobile-1.webp","media":"(max-width: 767px)","fetchPriority":"high"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","link",null,{"rel":"icon","href":"/favicon.ico"}],["$","link",null,{"rel":"apple-touch-icon","sizes":"180x180","href":"/apple-touch-icon.png"}],["$","link",null,{"rel":"icon","type":"image/png","sizes":"32x32","href":"/favicon-32x32.png"}],["$","link",null,{"rel":"icon","type":"image/png","sizes":"16x16","href":"/favicon-16x16.png"}],["$","link",null,{"rel":"manifest","href":"/site.webmanifest"}],["$","meta",null,{"name":"theme-color","content":"#2563eb"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"AutoRepair\",\"name\":\"Autoservis Katanović\",\"description\":\"Profesionalni autoservis za sve vrste vozila\",\"url\":\"https://autoservis-katanovic.com\",\"telephone\":\"+385958427667\",\"email\":\"autoserviskatanovic@gmail.com\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Finčevec 9\",\"addressLocality\":\"Sveti Petar Orehovec\",\"postalCode\":\"48260\",\"addressCountry\":\"HR\"},\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":\"46.1\",\"longitude\":\"16.2\"},\"openingHours\":[\"Mo-Fr 08:00-20:00\",\"Sa 08:00-14:00\"],\"priceRange\":\"$$\",\"image\":\"https://autoservis-katanovic.com/og-image.jpg\",\"sameAs\":[]}"}}]]}],["$","body",null,{"className":"__className_e57026","children":["$","$L3",null,{"children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-white dark:bg-gray-900","children":[["$","$L7",null,{}],["$","main",null,{"children":[["$","$L8",null,{}],["$","$L9",null,{}],["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}],["$","$Le",null,{}]]}],["$","$Lf",null,{}]]}],"$undefined",null,["$","$L10",null,{"children":["$L11","$L12",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","lCCi2PLl3SOrGabXJj9dN",{"children":[["$","$L13",null,{"children":"$L14"}],null]}],["$","$L15",null,{"children":"$L16"}]]}],false]],"m":"$undefined","G":["$17","$undefined"],"s":false,"S":true}
+14:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+11:null
+12:null
+16:[["$","title","0",{"children":"Autoservis Katanović - Profesionalni autoservis u Finčevcu"}],["$","meta","1",{"name":"description","content":"Autoservis Katanović je pouzdan i stručan servis za sve vrste vozila. Pružamo širok spektar usluga od redovnog održavanja do složenih popravaka i dijagnostike."}],["$","meta","2",{"name":"author","content":"Autoservis Katanović"}],["$","meta","3",{"name":"generator","content":"v0.dev"}],["$","meta","4",{"name":"keywords","content":"autoservis, popravak automobila, održavanje vozila, dijagnostika, Finčevec, Sveti Petar Orehovec"}],["$","meta","5",{"name":"creator","content":"Autoservis Katanović"}],["$","meta","6",{"name":"publisher","content":"Autoservis Katanović"}],["$","meta","7",{"name":"robots","content":"index, follow"}],["$","link","8",{"rel":"canonical","href":"https://autoservis-katanovic.com"}],["$","link","9",{"rel":"alternate","hrefLang":"hr","href":"https://autoservis-katanovic.com/hr"}],["$","link","10",{"rel":"alternate","hrefLang":"en","href":"https://autoservis-katanovic.com/en"}],["$","link","11",{"rel":"alternate","hrefLang":"de","href":"https://autoservis-katanovic.com/de"}],["$","link","12",{"rel":"alternate","hrefLang":"it","href":"https://autoservis-katanovic.com/it"}],["$","link","13",{"rel":"alternate","hrefLang":"es","href":"https://autoservis-katanovic.com/es"}],["$","meta","14",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","15",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","16",{"property":"og:title","content":"Autoservis Katanović - Profesionalni autoservis"}],["$","meta","17",{"property":"og:description","content":"Pouzdan i stručan servis za sve vrste vozila osnovan 2015. godine"}],["$","meta","18",{"property":"og:site_name","content":"Autoservis Katanović"}],["$","meta","19",{"property":"og:locale","content":"hr_HR"}],["$","meta","20",{"property":"og:type","content":"website"}],["$","meta","21",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","22",{"name":"twitter:title","content":"Autoservis Katanović - Profesionalni autoservis"}],["$","meta","23",{"name":"twitter:description","content":"Pouzdan i stručan servis za sve vrste vozila osnovan 2015. godine"}],["$","meta","24",{"name":"twitter:image","content":"https://autoservis-katanovic.com/og-image.jpg"}]]
