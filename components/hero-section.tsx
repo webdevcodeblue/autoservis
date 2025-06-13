@@ -1,41 +1,68 @@
-"use client"
+'use client';
 
-import { Button } from "@/components/ui/button"
-import { Phone, Mail, MapPin, ChevronDown } from "lucide-react"
-import { useLanguage } from "@/lib/language-context"
-import { useEffect, useState } from "react"
+import { Button } from '@/components/ui/button';
+import { Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
+import { useLanguage } from '@/lib/language-context';
+import { useEffect, useState } from 'react';
 
 export function HeroSection() {
-  const { t } = useLanguage()
-  const [isVisible, setIsVisible] = useState(false)
+  const { t } = useLanguage();
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Immediate visibility for critical content
-    setIsVisible(true)
-  }, [])
+    setIsVisible(true);
+  }, []);
 
   const scrollToContact = () => {
-    const element = document.getElementById("contact")
+    const element = document.getElementById('contact');
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+  };
 
   const scrollToNextSection = () => {
-    const element = document.getElementById("how-we-work")
+    const element = document.getElementById('how-we-work');
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+  };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center">
-      {/* Optimized background images - using CSS for fastest rendering */}
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center gpu-acceleration"
+      style={{
+        containIntrinsicSize: '100vw 100vh',
+        contentVisibility: 'auto',
+      }}
+    >
+      {/* Optimized background images - using IMG elements for better LCP */}
       <div className="absolute inset-0">
         {/* Desktop background */}
-        <div className="hero-bg-desktop hidden md:block" />
-        {/* Mobile background */}
-        <div className="hero-bg-mobile block md:hidden" />
+        <div className="hidden md:block absolute inset-0">
+          <img
+            src="/images/hero-background.webp"
+            alt=""
+            className="w-full h-full object-cover gpu-acceleration"
+            fetchPriority="high"
+            decoding="async"
+            style={{ willChange: 'transform' }}
+          />
+          <div className="absolute inset-0 bg-black/65"></div>
+        </div>
+        {/* Mobile background - critical for LCP */}
+        <div className="block md:hidden absolute inset-0">
+          <img
+            src="/images/hero-mobile-1.webp"
+            alt=""
+            className="w-full h-full object-cover gpu-acceleration"
+            fetchPriority="high"
+            decoding="sync"
+            style={{ willChange: 'transform' }}
+          />
+          <div className="absolute inset-0 bg-black/65"></div>
+        </div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-20">
@@ -50,28 +77,34 @@ export function HeroSection() {
               </h1>
               <div className="text-2xl md:text-3xl font-light text-blue-200 tracking-wide">
                 <span className="inline-block border-l-4 border-blue-400 pl-4">
-                  {t("heroTitle").split(" - ")[1] || t("reliablePartner")}
+                  {t('heroTitle').split(' - ')[1] || t('reliablePartner')}
                 </span>
               </div>
             </div>
 
             <p className="text-xl md:text-2xl mb-12 text-gray-200 max-w-3xl mx-auto font-light leading-relaxed italic">
-              {t("heroSubtitle")}
+              {t('heroSubtitle')}
             </p>
 
             {/* Elegant feature highlights - immediate visibility */}
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-16 text-lg">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                <span className="text-gray-200 font-medium">{t("maintenance")}</span>
+                <span className="text-gray-200 font-medium">
+                  {t('maintenance')}
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                <span className="text-gray-200 font-medium">{t("diagnostics")}</span>
+                <span className="text-gray-200 font-medium">
+                  {t('diagnostics')}
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                <span className="text-gray-200 font-medium">{t("fastService")}</span>
+                <span className="text-gray-200 font-medium">
+                  {t('fastService')}
+                </span>
               </div>
             </div>
           </div>
@@ -83,16 +116,16 @@ export function HeroSection() {
               className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white px-8 py-6 text-lg rounded-full transition-transform duration-200 hover:scale-105"
               onClick={scrollToContact}
             >
-              {t("contactUs")}
+              {t('contactUs')}
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-white bg-white/10 text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg rounded-full transition-all duration-200 hover:scale-105"
-              onClick={() => window.open("tel:+385958427667")}
+              onClick={() => window.open('tel:+385958427667')}
             >
               <Phone className="mr-2 h-5 w-5" />
-              {t("callNow")}
+              {t('callNow')}
             </Button>
           </div>
 
@@ -119,12 +152,14 @@ export function HeroSection() {
         <button
           onClick={scrollToNextSection}
           className="flex flex-col items-center opacity-80 hover:opacity-100 transition-opacity duration-200"
-          aria-label={t("scrollDown")}
+          aria-label={t('scrollDown')}
         >
-          <span className="text-xs sm:text-sm mb-1 sm:mb-2">{t("scrollDown")}</span>
+          <span className="text-xs sm:text-sm mb-1 sm:mb-2">
+            {t('scrollDown')}
+          </span>
           <ChevronDown className="h-4 w-4 sm:h-6 sm:w-6" />
         </button>
       </div>
     </section>
-  )
+  );
 }

@@ -122,31 +122,7 @@ export default function RootLayout({
               position: relative;
             }
             
-            .hero-bg-desktop {
-              position: absolute;
-              inset: 0;
-              background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/images/hero-background.webp');
-              background-size: cover;
-              background-position: center;
-              background-repeat: no-repeat;
-            }
-            
-            .hero-bg-mobile {
-              position: absolute;
-              inset: 0;
-              background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/images/hero-mobile-1.webp');
-              background-size: cover;
-              background-position: center;
-              background-repeat: no-repeat;
-            }
-            
-            @media (min-width: 768px) {
-              .hero-bg-mobile { display: none; }
-            }
-            
-            @media (max-width: 767px) {
-              .hero-bg-desktop { display: none; }
-            }
+
             
             /* Prevent layout shift */
             body {
