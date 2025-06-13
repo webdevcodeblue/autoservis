@@ -7,6 +7,8 @@ export const translations = {
     team: 'Tim',
     contact: 'Kontakt',
     management: 'Upravljanje',
+    openMenu: 'Otvori meni',
+    closeMenu: 'Zatvori meni',
 
     // Header
     professionalAutoService: 'Profesionalni autoservis',
@@ -424,6 +426,8 @@ export const translations = {
     team: 'Team',
     contact: 'Contact',
     management: 'Management',
+    openMenu: 'Open Menu',
+    closeMenu: 'Close Menu',
 
     // Header
     professionalAutoService: 'Professional Auto Service',
@@ -813,6 +817,8 @@ export const translations = {
     about: 'Über uns',
     team: 'Team',
     contact: 'Kontakt',
+    openMenu: 'Menü öffnen',
+    closeMenu: 'Menü schließen',
     management: 'Management',
 
     // Header
