@@ -94,28 +94,19 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
-        {/* CRITICAL: Preload hero images with highest priority */}
-        {/* Preload obje hero slike s media queries za instant loading */}
+        {/* CRITICAL: Preload hero image with highest priority */}
         <link
           rel="preload"
           as="image"
-          href="/images/hero-mobile-1.webp"
-          media="(max-width: 767px)"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero-background.webp"
-          media="(min-width: 768px)"
+          href="/images/hero-background-onlyone.webp"
           fetchPriority="high"
         />
 
-        {/* CRITICAL: Inline critical CSS to prevent render blocking */}
+        {/* Simple critical CSS for hero section */}
         <style
           dangerouslySetInnerHTML={{
             __html: `
-            /* Critical CSS for hero section - instant rendering */
+            /* Critical CSS for hero section */
             #home {
               min-height: 100vh;
               display: flex;
@@ -123,60 +114,10 @@ export default function RootLayout({
               position: relative;
             }
             
-            /* Ensure hero images render immediately */
-            #home .absolute {
-              position: absolute;
-              inset: 0;
-            }
-            
-            #home img[src*="hero-mobile"] {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              display: block;
-            }
-            
-            #home img[src*="hero-background"] {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              display: none;
-            }
-            
-            @media (min-width: 768px) {
-              #home img[src*="hero-mobile"] {
-                display: none;
-              }
-              #home img[src*="hero-background"] {
-                display: block;
-              }
-            }
-            
-
-            
             /* Prevent layout shift */
             body {
               margin: 0;
               min-height: 100vh;
-            }
-            
-            /* Critical font loading */
-            @font-face {
-              font-family: 'Inter';
-              font-style: normal;
-              font-weight: 400;
-              font-display: swap;
-              src: url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
-              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-            }
-            
-            @font-face {
-              font-family: 'Inter';
-              font-style: normal;
-              font-weight: 700;
-              font-display: swap;
-              src: url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiA.woff2') format('woff2');
-              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
             }
           `,
           }}
