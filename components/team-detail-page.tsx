@@ -43,8 +43,8 @@ export function TeamDetailPage() {
         email: 'ivan@autoserviskatanovic.com',
       },
       social: {
-        facebook: '#',
-        instagram: '#',
+        facebook: 'https://www.facebook.com/ivan.katanovic.1',
+        instagram: 'https://www.instagram.com/ivankatanovic/',
       },
     },
     {
@@ -66,8 +66,8 @@ export function TeamDetailPage() {
         email: 'matija@autoserviskatanovic.com',
       },
       social: {
-        facebook: '#',
-        instagram: '#',
+        facebook: 'https://www.facebook.com/profile.php?id=100006224880058',
+        instagram: 'https://www.instagram.com/matijanemcic/',
       },
     },
     {
@@ -89,8 +89,8 @@ export function TeamDetailPage() {
         email: 'ivan.mikec@autoserviskatanovic.com',
       },
       social: {
-        facebook: '#',
-        instagram: '#',
+        facebook: 'https://www.facebook.com/ivan.mikec.33',
+        instagram: 'https://www.instagram.com/ivan.mikec.33/',
       },
     },
     {
@@ -112,8 +112,8 @@ export function TeamDetailPage() {
         email: 'karolina@autoserviskatanovic.com',
       },
       social: {
-        facebook: '#',
-        instagram: '#',
+        facebook: 'https://www.facebook.com/karolina.sok4',
+        instagram: 'https://www.instagram.com/karolina.sok/',
       },
     },
   ];
@@ -255,6 +255,8 @@ export function TeamDetailPage() {
                         <div className="absolute bottom-6 right-6 flex space-x-3">
                           <a
                             href={member.social.facebook}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="bg-white/90 dark:bg-gray-800/90 p-3 rounded-xl shadow-lg hover:bg-white dark:hover:bg-gray-700 transition-colors"
                             aria-label={`${member.name} Facebook profil`}
                           >
@@ -262,6 +264,8 @@ export function TeamDetailPage() {
                           </a>
                           <a
                             href={member.social.instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="bg-white/90 dark:bg-gray-800/90 p-3 rounded-xl shadow-lg hover:bg-white dark:hover:bg-gray-700 transition-colors"
                             aria-label={`${member.name} Instagram profil`}
                           >
