@@ -3,41 +3,9 @@
 import { Button } from '@/components/ui/button';
 import { Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
-import { useEffect, useState } from 'react';
-
-// Hook za detektiranje screen size-a
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(true); // Mobile-first approach
-
-  useEffect(() => {
-    const checkMobile = () => {
-      if (typeof window !== 'undefined') {
-        setIsMobile(window.innerWidth < 768);
-      }
-    };
-
-    // Initial check
-    checkMobile();
-
-    // Listen for resize
-    if (typeof window !== 'undefined') {
-      window.addEventListener('resize', checkMobile);
-      return () => window.removeEventListener('resize', checkMobile);
-    }
-  }, []);
-
-  return isMobile;
-}
 
 export function HeroSection() {
   const { t } = useLanguage();
-  const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
-
-  useEffect(() => {
-    // Immediate visibility for critical content
-    setIsVisible(true);
-  }, []);
 
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -62,21 +30,27 @@ export function HeroSection() {
         contentVisibility: 'auto',
       }}
     >
-      {/* Optimized background - uvjetno renderiranje samo jedne slike */}
+      {/* Ultra-fast CSS approach - instant rendering */}
       <div className="absolute inset-0">
+        {/* Mobile image - critical for LCP */}
         <img
-          src={
-            isMobile
-              ? '/images/hero-mobile-1.webp'
-              : '/images/hero-background.webp'
-          }
+          src="/images/hero-mobile-1.webp"
           alt=""
-          className="w-full h-full object-cover gpu-acceleration"
+          className="w-full h-full object-cover md:hidden"
+          loading="eager"
           fetchPriority="high"
-          decoding={isMobile ? 'sync' : 'async'}
-          style={{ willChange: 'transform' }}
+          decoding="sync"
         />
-        <div className="absolute inset-0 bg-black/65"></div>
+        {/* Desktop image - conditional loading */}
+        <img
+          src="/images/hero-background.webp"
+          alt=""
+          className="w-full h-full object-cover hidden md:block"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
+        <div className="absolute inset-0 bg-black/65 z-10"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-20">
