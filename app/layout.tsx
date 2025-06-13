@@ -95,11 +95,19 @@ export default function RootLayout({
         />
 
         {/* CRITICAL: Preload hero images with highest priority */}
-        {/* Preload samo mobilnu sliku jer se uvijek učitava prva (mobile-first) */}
+        {/* Preload obje hero slike s media queries za instant loading */}
         <link
           rel="preload"
           as="image"
           href="/images/hero-mobile-1.webp"
+          media="(max-width: 767px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-background.webp"
+          media="(min-width: 768px)"
           fetchPriority="high"
         />
 
@@ -107,12 +115,41 @@ export default function RootLayout({
         <style
           dangerouslySetInnerHTML={{
             __html: `
-            /* Critical CSS for hero section */
+            /* Critical CSS for hero section - instant rendering */
             #home {
               min-height: 100vh;
               display: flex;
               align-items: center;
               position: relative;
+            }
+            
+            /* Ensure hero images render immediately */
+            #home .absolute {
+              position: absolute;
+              inset: 0;
+            }
+            
+            #home img[src*="hero-mobile"] {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+            }
+            
+            #home img[src*="hero-background"] {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: none;
+            }
+            
+            @media (min-width: 768px) {
+              #home img[src*="hero-mobile"] {
+                display: none;
+              }
+              #home img[src*="hero-background"] {
+                display: block;
+              }
             }
             
 
