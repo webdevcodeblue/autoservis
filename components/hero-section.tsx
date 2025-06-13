@@ -5,9 +5,34 @@ import { Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
 import { useEffect, useState } from 'react';
 
+// Hook za detektiranje screen size-a
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(true); // Mobile-first approach
+
+  useEffect(() => {
+    const checkMobile = () => {
+      if (typeof window !== 'undefined') {
+        setIsMobile(window.innerWidth < 768);
+      }
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Listen for resize
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', checkMobile);
+      return () => window.removeEventListener('resize', checkMobile);
+    }
+  }, []);
+
+  return isMobile;
+}
+
 export function HeroSection() {
   const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     // Immediate visibility for critical content
@@ -37,32 +62,21 @@ export function HeroSection() {
         contentVisibility: 'auto',
       }}
     >
-      {/* Optimized background images - using IMG elements for better LCP */}
+      {/* Optimized background - uvjetno renderiranje samo jedne slike */}
       <div className="absolute inset-0">
-        {/* Desktop background */}
-        <div className="hidden md:block absolute inset-0">
-          <img
-            src="/images/hero-background.webp"
-            alt=""
-            className="w-full h-full object-cover gpu-acceleration"
-            fetchPriority="high"
-            decoding="async"
-            style={{ willChange: 'transform' }}
-          />
-          <div className="absolute inset-0 bg-black/65"></div>
-        </div>
-        {/* Mobile background - critical for LCP */}
-        <div className="block md:hidden absolute inset-0">
-          <img
-            src="/images/hero-mobile-1.webp"
-            alt=""
-            className="w-full h-full object-cover gpu-acceleration"
-            fetchPriority="high"
-            decoding="sync"
-            style={{ willChange: 'transform' }}
-          />
-          <div className="absolute inset-0 bg-black/65"></div>
-        </div>
+        <img
+          src={
+            isMobile
+              ? '/images/hero-mobile-1.webp'
+              : '/images/hero-background.webp'
+          }
+          alt=""
+          className="w-full h-full object-cover gpu-acceleration"
+          fetchPriority="high"
+          decoding={isMobile ? 'sync' : 'async'}
+          style={{ willChange: 'transform' }}
+        />
+        <div className="absolute inset-0 bg-black/65"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-20">

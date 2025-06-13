@@ -95,18 +95,11 @@ export default function RootLayout({
         />
 
         {/* CRITICAL: Preload hero images with highest priority */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero-background.webp"
-          media="(min-width: 768px)"
-          fetchPriority="high"
-        />
+        {/* Preload samo mobilnu sliku jer se uvijek učitava prva (mobile-first) */}
         <link
           rel="preload"
           as="image"
           href="/images/hero-mobile-1.webp"
-          media="(max-width: 767px)"
           fetchPriority="high"
         />
 
