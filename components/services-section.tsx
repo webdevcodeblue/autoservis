@@ -32,19 +32,19 @@ export function ServicesSection() {
       icon: Wrench,
       title: t('regularMaintenance'),
       description: t('regularMaintenanceDesc'),
-      image: '/images/services/maintenance.jpg',
+      image: '/images/services/maintenance.webp',
     },
     {
       icon: Shield,
       title: t('brakeService'),
       description: t('brakeServiceDesc'),
-      image: '/images/services/brakes.jpg',
+      image: '/images/services/brakes.webp',
     },
     {
       icon: Zap,
       title: t('electricalServices'),
       description: t('electricalServicesDesc'),
-      image: '/images/services/electrical.jpg',
+      image: '/images/services/electrical.webp',
     },
     {
       icon: Activity,
@@ -56,7 +56,7 @@ export function ServicesSection() {
       icon: Wind,
       title: t('exhaustSystems'),
       description: t('exhaustSystemsDesc'),
-      image: '/images/services/exhaust.jpg',
+      image: '/images/services/exhaust.webp',
     },
     {
       icon: Snowflake,
@@ -68,13 +68,13 @@ export function ServicesSection() {
       icon: FileText,
       title: t('technicalInspection'),
       description: t('technicalInspectionDesc'),
-      image: '/images/services/technical-inspection.jpg',
+      image: '/images/services/technical-inspection.webp',
     },
     {
       icon: Lightbulb,
       title: t('lightingService'),
       description: t('lightingServiceDesc'),
-      image: '/images/services/lighting.jpg',
+      image: '/images/services/lighting.webp',
     },
   ];
 

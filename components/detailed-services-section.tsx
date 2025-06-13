@@ -1,25 +1,35 @@
-"use client"
-import { Button } from "@/components/ui/button"
-import { Wrench, Zap, Activity, Wind, Lightbulb, Shield, FileText, Snowflake, ArrowLeft } from "lucide-react"
-import { useLanguage } from "@/lib/language-context"
-import { useInView } from "@/hooks/use-intersection-observer"
-import { useRouter } from "next/navigation"
-import Link from "next/link"
+'use client';
+import { Button } from '@/components/ui/button';
+import {
+  Wrench,
+  Zap,
+  Activity,
+  Wind,
+  Lightbulb,
+  Shield,
+  FileText,
+  Snowflake,
+  ArrowLeft,
+} from 'lucide-react';
+import { useLanguage } from '@/lib/language-context';
+import { useInView } from '@/hooks/use-intersection-observer';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export function DetailedServicesSection() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
-  })
-  const router = useRouter()
+  });
+  const router = useRouter();
 
   const services = [
     {
       icon: Wrench,
-      title: t("regularMaintenance"),
-      description: t("regularMaintenanceDesc"),
-      image: "/images/services/maintenance.jpg",
+      title: t('regularMaintenance'),
+      description: t('regularMaintenanceDesc'),
+      image: '/images/services/maintenance.webp',
       detailedDescription: `
         Redovno održavanje vašeg vozila ključno je za njegovu dugovječnost i pouzdanost. 
         U Autoservisu Katanović nudimo kompletnu uslugu redovnog održavanja koja uključuje:
@@ -37,9 +47,9 @@ export function DetailedServicesSection() {
     },
     {
       icon: Shield,
-      title: t("brakeService"),
-      description: t("brakeServiceDesc"),
-      image: "/images/services/brakes.jpg",
+      title: t('brakeService'),
+      description: t('brakeServiceDesc'),
+      image: '/images/services/brakes.webp',
       detailedDescription: `
         Kočioni sustav je jedan od najvažnijih sigurnosnih elemenata vašeg vozila. 
         Naša usluga servisa kočnica uključuje:
@@ -56,9 +66,9 @@ export function DetailedServicesSection() {
     },
     {
       icon: Zap,
-      title: t("electricalServices"),
-      description: t("electricalServicesDesc"),
-      image: "/images/services/electrical.jpg",
+      title: t('electricalServices'),
+      description: t('electricalServicesDesc'),
+      image: '/images/services/electrical.webp',
       detailedDescription: `
         Moderni automobili imaju složene električne sustave koji zahtijevaju stručno održavanje. 
         Naše autoelektričarske usluge uključuju:
@@ -76,9 +86,9 @@ export function DetailedServicesSection() {
     },
     {
       icon: Activity,
-      title: t("suspensionService"),
-      description: t("suspensionServiceDesc"),
-      image: "/images/services/suspension.webp",
+      title: t('suspensionService'),
+      description: t('suspensionServiceDesc'),
+      image: '/images/services/suspension.webp',
       detailedDescription: `
         Ovjes i upravljački sustav direktno utječu na udobnost vožnje i upravljivost vozila. 
         Naše usluge uključuju:
@@ -95,9 +105,9 @@ export function DetailedServicesSection() {
     },
     {
       icon: Wind,
-      title: t("exhaustSystems"),
-      description: t("exhaustSystemsDesc"),
-      image: "/images/services/exhaust.jpg",
+      title: t('exhaustSystems'),
+      description: t('exhaustSystemsDesc'),
+      image: '/images/services/exhaust.webp',
       detailedDescription: `
         Ispušni sustav važan je za performanse motora i smanjenje emisije štetnih plinova. 
         Naše usluge uključuju:
@@ -114,9 +124,9 @@ export function DetailedServicesSection() {
     },
     {
       icon: Snowflake,
-      title: t("airConditioningService"),
-      description: t("airConditioningServiceDesc"),
-      image: "/images/services/air-conditioning.webp",
+      title: t('airConditioningService'),
+      description: t('airConditioningServiceDesc'),
+      image: '/images/services/air-conditioning.webp',
       detailedDescription: `
         Klima uređaj u vozilu osigurava ugodnu vožnju tijekom cijele godine. 
         Naše usluge servisa klima uređaja uključuju:
@@ -133,9 +143,9 @@ export function DetailedServicesSection() {
     },
     {
       icon: FileText,
-      title: t("technicalInspection"),
-      description: t("technicalInspectionDesc"),
-      image: "/images/services/technical-inspection.jpg",
+      title: t('technicalInspection'),
+      description: t('technicalInspectionDesc'),
+      image: '/images/services/technical-inspection.webp',
       detailedDescription: `
         Priprema za tehnički pregled ključna je za uspješno prolaženje obveznog godišnjeg pregleda. 
         Naša usluga uključuje:
@@ -153,9 +163,9 @@ export function DetailedServicesSection() {
     },
     {
       icon: Lightbulb,
-      title: t("lightingService"),
-      description: t("lightingServiceDesc"),
-      image: "/images/services/lighting.jpg",
+      title: t('lightingService'),
+      description: t('lightingServiceDesc'),
+      image: '/images/services/lighting.webp',
       detailedDescription: `
         Dobra vidljivost ključna je za sigurnu vožnju. 
         Naše usluge servisa svjetala i vidljivosti uključuju:
@@ -171,7 +181,7 @@ export function DetailedServicesSection() {
         Osiguravamo optimalnu vidljivost u svim vremenskim uvjetima i dobima dana.
       `,
     },
-  ]
+  ];
 
   return (
     <section className="py-20 relative overflow-hidden">
@@ -180,41 +190,49 @@ export function DetailedServicesSection() {
       <div ref={ref} className="container mx-auto px-4 relative z-10">
         <div className="flex justify-between items-center mb-8">
           <Link href="/">
-            <Button variant="ghost" className="flex items-center space-x-2 text-blue-600 dark:text-blue-400">
+            <Button
+              variant="ghost"
+              className="flex items-center space-x-2 text-blue-600 dark:text-blue-400"
+            >
               <ArrowLeft className="h-4 w-4" />
               <span>Povratak na početnu</span>
             </Button>
           </Link>
         </div>
 
-        <div className={`text-center mb-16 animate-fade-in ${inView ? "visible" : ""}`}>
+        <div
+          className={`text-center mb-16 animate-fade-in ${
+            inView ? 'visible' : ''
+          }`}
+        >
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 mt-2">
             <span className="text-gradient dark:bg-gradient-to-r dark:from-blue-400 dark:to-blue-600 dark:bg-clip-text dark:text-transparent">
-              {t("ourServices")}
+              {t('ourServices')}
             </span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Autoservis Katanović nudi širok spektar usluga za održavanje i popravak vašeg vozila. Naš stručni tim
-            mehaničara koristi najmoderniju opremu i kvalitetne dijelove kako bi osigurao najbolju uslugu za vaš
-            automobil.
+            Autoservis Katanović nudi širok spektar usluga za održavanje i
+            popravak vašeg vozila. Naš stručni tim mehaničara koristi
+            najmoderniju opremu i kvalitetne dijelove kako bi osigurao najbolju
+            uslugu za vaš automobil.
           </p>
         </div>
 
         <div className="space-y-16">
           {services.map((service, index) => {
-            const IconComponent = service.icon
+            const IconComponent = service.icon;
             return (
               <div
                 key={index}
                 className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden animate-fade-in ${
-                  inView ? "visible" : ""
+                  inView ? 'visible' : ''
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="grid md:grid-cols-2 gap-0">
                   <div className="h-64 md:h-auto overflow-hidden">
                     <img
-                      src={service.image || "/placeholder.svg"}
+                      src={service.image || '/placeholder.svg'}
                       alt={service.title}
                       className="w-full h-full object-cover"
                       loading="lazy"
@@ -225,20 +243,27 @@ export function DetailedServicesSection() {
                       <div className="bg-gradient-to-r from-blue-600 to-blue-800 w-12 h-12 rounded-full flex items-center justify-center">
                         <IconComponent className="h-6 w-6 text-white" />
                       </div>
-                      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">{service.title}</h2>
+                      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+                        {service.title}
+                      </h2>
                     </div>
 
                     <div className="prose dark:prose-invert max-w-none">
-                      {service.detailedDescription.split("\n").map((paragraph, i) => (
-                        <p key={i} className="text-gray-600 dark:text-gray-300 mb-4">
-                          {paragraph}
-                        </p>
-                      ))}
+                      {service.detailedDescription
+                        .split('\n')
+                        .map((paragraph, i) => (
+                          <p
+                            key={i}
+                            className="text-gray-600 dark:text-gray-300 mb-4"
+                          >
+                            {paragraph}
+                          </p>
+                        ))}
                     </div>
 
                     <div className="mt-6">
                       <Button
-                        onClick={() => router.push("/#contact")}
+                        onClick={() => router.push('/#contact')}
                         className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white"
                       >
                         Zatražite ponudu
@@ -247,7 +272,7 @@ export function DetailedServicesSection() {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
 
@@ -256,7 +281,7 @@ export function DetailedServicesSection() {
             Imate pitanja o našim uslugama ili trebate savjet za vaše vozilo?
           </p>
           <Button
-            onClick={() => router.push("/#contact")}
+            onClick={() => router.push('/#contact')}
             className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white px-8 py-6 text-lg rounded-full"
           >
             Kontaktirajte nas
@@ -264,5 +289,5 @@ export function DetailedServicesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

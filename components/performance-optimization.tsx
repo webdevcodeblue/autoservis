@@ -8,21 +8,21 @@ export function PerformanceOptimization() {
       {/* Preload critical images */}
       <link
         rel="preload"
-        href="/images/services/maintenance.jpg"
+        href="/images/services/maintenance.webp"
         as="image"
-        type="image/jpeg"
+        type="image/webp"
       />
       <link
         rel="preload"
-        href="/images/services/brakes.jpg"
+        href="/images/services/brakes.webp"
         as="image"
-        type="image/jpeg"
+        type="image/webp"
       />
       <link
         rel="preload"
-        href="/images/services/electrical.jpg"
+        href="/images/services/electrical.webp"
         as="image"
-        type="image/jpeg"
+        type="image/webp"
       />
 
       {/* DNS prefetch for external resources */}

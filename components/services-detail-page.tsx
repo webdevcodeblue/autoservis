@@ -24,7 +24,7 @@ export function ServicesDetailPage() {
       icon: Wrench,
       title: t('regularMaintenance'),
       description: t('regularMaintenanceDesc'),
-      image: '/images/services/maintenance.jpg',
+      image: '/images/services/maintenance.webp',
       details: [
         t('regularMaintenanceDetail1'),
         t('regularMaintenanceDetail2'),
@@ -39,7 +39,7 @@ export function ServicesDetailPage() {
       icon: Shield,
       title: t('brakeService'),
       description: t('brakeServiceDesc'),
-      image: '/images/services/brakes.jpg',
+      image: '/images/services/brakes.webp',
       details: [
         t('brakeServiceDetail1'),
         t('brakeServiceDetail2'),
@@ -53,7 +53,7 @@ export function ServicesDetailPage() {
       icon: Zap,
       title: t('electricalServices'),
       description: t('electricalServicesDesc'),
-      image: '/images/services/electrical.jpg',
+      image: '/images/services/electrical.webp',
       details: [
         t('electricalServicesDetail1'),
         t('electricalServicesDetail2'),
@@ -82,7 +82,7 @@ export function ServicesDetailPage() {
       icon: Wind,
       title: t('exhaustSystems'),
       description: t('exhaustSystemsDesc'),
-      image: '/images/services/exhaust.jpg',
+      image: '/images/services/exhaust.webp',
       details: [
         t('exhaustSystemsDetail1'),
         t('exhaustSystemsDetail2'),
@@ -110,7 +110,7 @@ export function ServicesDetailPage() {
       icon: FileText,
       title: t('technicalInspection'),
       description: t('technicalInspectionDesc'),
-      image: '/images/services/technical-inspection.jpg',
+      image: '/images/services/technical-inspection.webp',
       details: [
         t('technicalInspectionDetail1'),
         t('technicalInspectionDetail2'),
@@ -125,7 +125,7 @@ export function ServicesDetailPage() {
       icon: Lightbulb,
       title: t('lightingService'),
       description: t('lightingServiceDesc'),
-      image: '/images/services/lighting.jpg',
+      image: '/images/services/lighting.webp',
       details: [
         t('lightingServiceDetail1'),
         t('lightingServiceDetail2'),
