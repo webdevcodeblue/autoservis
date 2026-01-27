@@ -416,6 +416,22 @@ export const translations = {
     joinOurStoryDescription:
       'Pridružite se stotinama zadovoljnih klijenata koji su nam povjerili brigu o svojim vozilima. Kontaktirajte nas danas i uvjerite se zašto smo prvi izbor u regiji.',
     viewServices: 'Pogledajte usluge',
+
+    // Blog
+    blog: 'Blog',
+    blogTitle: 'Blog',
+    blogSubheading: 'Novosti i savjeti',
+    blogDescription: 'Pročitajte najnovije vijesti, savjete i članke o održavanju vozila.',
+    blogReadMore: 'Pročitajte više',
+    blogViewAll: 'Pogledajte sve članke',
+    blogAllCategories: 'Sve kategorije',
+    blogNoPosts: 'Trenutno nema objavljenih članaka.',
+    blogBackToList: 'Natrag na blog',
+    blogCTATitle: 'Trebate servis za vaše vozilo?',
+    blogCTADescription: 'Kontaktirajte nas za besplatnu procjenu i stručan savjet za vaše vozilo.',
+    blogPublishedOn: 'Objavljeno',
+    blogBy: 'Autor',
+    backToHome: 'Natrag na početnu',
   },
 
   en: {
@@ -808,6 +824,22 @@ export const translations = {
     joinOurStoryDescription:
       'Join hundreds of satisfied customers who have entrusted us with the care of their vehicles. Contact us today and see why we are the first choice in the region.',
     viewServices: 'View Services',
+
+    // Blog
+    blog: 'Blog',
+    blogTitle: 'Blog',
+    blogSubheading: 'News & Tips',
+    blogDescription: 'Read the latest news, tips, and articles about vehicle maintenance.',
+    blogReadMore: 'Read more',
+    blogViewAll: 'View all articles',
+    blogAllCategories: 'All categories',
+    blogNoPosts: 'No articles published yet.',
+    blogBackToList: 'Back to blog',
+    blogCTATitle: 'Need service for your vehicle?',
+    blogCTADescription: 'Contact us for a free estimate and expert advice for your vehicle.',
+    blogPublishedOn: 'Published',
+    blogBy: 'By',
+    backToHome: 'Back to home',
   },
 
   de: {
@@ -1211,6 +1243,22 @@ export const translations = {
     joinOurStoryDescription:
       'Schließen Sie sich Hunderten zufriedener Kunden an, die uns die Pflege ihrer Fahrzeuge anvertraut haben. Kontaktieren Sie uns heute und erfahren Sie, warum wir die erste Wahl in der Region sind.',
     viewServices: 'Services anzeigen',
+
+    // Blog
+    blog: 'Blog',
+    blogTitle: 'Blog',
+    blogSubheading: 'Neuigkeiten & Tipps',
+    blogDescription: 'Lesen Sie die neuesten Nachrichten, Tipps und Artikel zur Fahrzeugwartung.',
+    blogReadMore: 'Weiterlesen',
+    blogViewAll: 'Alle Artikel anzeigen',
+    blogAllCategories: 'Alle Kategorien',
+    blogNoPosts: 'Noch keine Artikel veröffentlicht.',
+    blogBackToList: 'Zurück zum Blog',
+    blogCTATitle: 'Brauchen Sie einen Service für Ihr Fahrzeug?',
+    blogCTADescription: 'Kontaktieren Sie uns für eine kostenlose Bewertung und fachkundige Beratung für Ihr Fahrzeug.',
+    blogPublishedOn: 'Veröffentlicht',
+    blogBy: 'Von',
+    backToHome: 'Zurück zur Startseite',
   },
 
   it: {
@@ -1619,6 +1667,22 @@ export const translations = {
     customerSupport: 'Supporto Clienti',
     regularKnowledgeUpdates:
       'Aggiornamento regolare di conoscenze e competenze',
+
+    // Blog
+    blog: 'Blog',
+    blogTitle: 'Blog',
+    blogSubheading: 'Notizie e consigli',
+    blogDescription: 'Leggete le ultime notizie, consigli e articoli sulla manutenzione dei veicoli.',
+    blogReadMore: 'Leggi di più',
+    blogViewAll: 'Visualizza tutti gli articoli',
+    blogAllCategories: 'Tutte le categorie',
+    blogNoPosts: 'Nessun articolo pubblicato al momento.',
+    blogBackToList: 'Torna al blog',
+    blogCTATitle: 'Avete bisogno di un servizio per il vostro veicolo?',
+    blogCTADescription: 'Contattateci per una valutazione gratuita e una consulenza esperta per il vostro veicolo.',
+    blogPublishedOn: 'Pubblicato',
+    blogBy: 'Di',
+    backToHome: 'Torna alla home',
   },
 
   es: {
@@ -2034,5 +2098,21 @@ export const translations = {
     fifteenPlusYearsExperience: '15+ años de experiencia',
     tenPlusYearsExperience: '10+ años de experiencia',
     fivePlusYearsExperience: '5+ años de experiencia',
+
+    // Blog
+    blog: 'Blog',
+    blogTitle: 'Blog',
+    blogSubheading: 'Noticias y consejos',
+    blogDescription: 'Lea las últimas noticias, consejos y artículos sobre el mantenimiento de vehículos.',
+    blogReadMore: 'Leer más',
+    blogViewAll: 'Ver todos los artículos',
+    blogAllCategories: 'Todas las categorías',
+    blogNoPosts: 'No hay artículos publicados todavía.',
+    blogBackToList: 'Volver al blog',
+    blogCTATitle: '¿Necesita servicio para su vehículo?',
+    blogCTADescription: 'Contáctenos para una evaluación gratuita y asesoramiento experto para su vehículo.',
+    blogPublishedOn: 'Publicado',
+    blogBy: 'Por',
+    backToHome: 'Volver al inicio',
   },
 };

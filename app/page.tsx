@@ -6,8 +6,10 @@ import { ServicesSection } from '@/components/services-section';
 import { TestimonialsSection } from '@/components/testimonials-section';
 import { TeamSection } from '@/components/team-section';
 import { AboutSection } from '@/components/about-section';
+import { BlogSection } from '@/components/blog-section';
 import { ContactSection } from '@/components/contact-section';
 import { Footer } from '@/components/footer';
+import { getLatestPosts } from '@/sanity/queries';
 
 export const metadata: Metadata = {
   title: 'Autoservis Katanović - Profesionalni autoservis u Finčevcu',
@@ -40,7 +42,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomePage() {
+export const revalidate = 60;
+
+export default async function HomePage() {
+  const latestPosts = await getLatestPosts(3);
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navbar />
@@ -51,6 +57,7 @@ export default function HomePage() {
         <TestimonialsSection />
         <TeamSection />
         <AboutSection />
+        <BlogSection posts={latestPosts} />
         <ContactSection />
       </main>
       <Footer />

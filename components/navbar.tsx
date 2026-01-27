@@ -175,6 +175,12 @@ export function Navbar() {
                 {t('team')}
               </Link>
               <Link
+                href="/blog"
+                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium"
+              >
+                {t('blog')}
+              </Link>
+              <Link
                 href="/kontakt"
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium"
               >
@@ -273,6 +279,13 @@ export function Navbar() {
                   onClick={() => setIsOpen(false)}
                 >
                   {t('team')}
+                </Link>
+                <Link
+                  href="/blog"
+                  className="text-left text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-3 border-b border-gray-100 dark:border-gray-700"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t('blog')}
                 </Link>
                 <Link
                   href="/kontakt"
