@@ -12,15 +12,12 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
+            <div className="mb-4 flex justify-center lg:justify-start">
               <img
-                src="/images/autoservis-logo.png"
+                src="/images/autoservis-logo-light.svg"
                 alt="Autoservis Katanović Logo"
-                className="w-10 h-10 object-contain"
+                className="h-12 w-auto"
               />
-              <div>
-                <h3 className="font-bold text-lg">Autoservis Katanović</h3>
-              </div>
             </div>
             <p className="text-gray-400 dark:text-gray-300 mb-4">{t("footerDescription")}</p>
             <p className="text-sm text-gray-500 dark:text-gray-400">
