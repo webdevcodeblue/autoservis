@@ -260,7 +260,7 @@ export function ServicesDetailPage() {
                           size="lg"
                           className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-2xl px-8 py-4 text-lg font-medium shadow-md"
                         >
-                          <Link href="/#contact">{t('requestQuote')}</Link>
+                          <Link href="/kontakt#contact-form">{t('requestQuote')}</Link>
                         </Button>
                       </div>
                     </div>
@@ -289,7 +289,7 @@ export function ServicesDetailPage() {
                     variant="secondary"
                     className="bg-white hover:bg-gray-50 text-blue-600 rounded-2xl px-10 py-4 text-lg font-semibold shadow-lg"
                   >
-                    <Link href="/#contact">{t('contactUs')}</Link>
+                    <Link href="/kontakt#contact-form">{t('contactUs')}</Link>
                   </Button>
                 </div>
               </div>

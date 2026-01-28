@@ -317,7 +317,7 @@ export function ContactDetailPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Form */}
             <div>
-              <div className="mb-8">
+              <div id="contact-form" className="scroll-mt-12 lg:scroll-mt-20 mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                   {t('sendUsMessage')}
                 </h2>
@@ -335,7 +335,6 @@ export function ContactDetailPage() {
                 </CardHeader>
                 <CardContent>
                   <form
-                    id="contact-form"
                     action={handleSubmit}
                     className="space-y-6"
                   >

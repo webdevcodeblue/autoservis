@@ -187,7 +187,7 @@ export const translations = {
     karolinaDescription: 'Stručnjakinja za financije i računovodstvo.',
     experts: 'Stručnjaka',
     totalExperience: 'Godina ukupnog iskustva',
-    specialization: 'Spezialisierung',
+    specialization: 'Specijalizacija',
     finance: 'Financije',
     customerSupport: 'Korisnička podrška',
     teamPageTitle: 'Naš stručni tim',
