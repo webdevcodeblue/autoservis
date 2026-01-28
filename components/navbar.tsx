@@ -146,12 +146,12 @@ export function Navbar() {
               <img
                 src="/images/autoservis-logo-light.svg"
                 alt="Autoservis Katanović Logo"
-                className="h-14 w-auto hidden dark:block"
+                className="h-10 lg:h-14 w-auto hidden dark:block"
               />
               <img
                 src="/images/autoservis-logo-dark.svg"
                 alt="Autoservis Katanović Logo"
-                className="h-14 w-auto block dark:hidden"
+                className="h-10 lg:h-14 w-auto block dark:hidden"
               />
             </Link>
 
