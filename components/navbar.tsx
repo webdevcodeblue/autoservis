@@ -13,6 +13,7 @@ import { useLanguage } from '@/lib/language-context';
 import { ThemeToggle } from '@/components/theme-toggle';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useTheme } from 'next-themes';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,12 @@ export function Navbar() {
   const { language, setLanguage, t } = useLanguage();
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const languages = [
     { code: 'hr', name: 'Hrvatski', flag: '🇭🇷' },
@@ -135,17 +142,17 @@ export function Navbar() {
         <div className="container mx-auto px-4 relative">
           <div className="flex justify-between items-center py-4 relative z-10">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center">
               <img
-                src="/images/autoservis-logo.png"
+                src="/images/autoservis-logo-light.svg"
                 alt="Autoservis Katanović Logo"
-                className="w-14 h-14 object-contain"
+                className="h-14 w-auto hidden dark:block"
               />
-              <div>
-                <h1 className="font-bold text-xl text-gray-800 dark:text-white">
-                  Autoservis Katanović
-                </h1>
-              </div>
+              <img
+                src="/images/autoservis-logo-dark.svg"
+                alt="Autoservis Katanović Logo"
+                className="h-14 w-auto block dark:hidden"
+              />
             </Link>
 
             {/* Desktop Navigation */}
